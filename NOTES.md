@@ -96,12 +96,28 @@ Advice comes with the pointcut to advise, so the declaration of advice is enough
 @Aspect
 public class AfterReturningExample {
 
-        @AfterReturning(
-                pointcut="com.xyz.myapp.SystemArchitecture.dataAccessOperation()",
-                returning="retVal")
-        public void doAccessCheck(Object retVal) {
-                // ...
-        }
+    @AfterReturning(
+            pointcut="com.xyz.myapp.SystemArchitecture.dataAccessOperation()",
+            returning="retVal")
+    public void doAccessCheck(Object retVal) {
+            // ...
+    }
 
 }
 ```
+
+This should provide enough context for Spring Aspect Oriented Programming for the discussion of the implementation to make sense.
+It's important to realise that Spring Aspect Oriented Programming is quite limited, and a full Aspect Oriented Programming implementation allows for full and arbitrary alteration of code.
+We will discuss Aspect J which is such an implementation.
+
+#### How is this achieved?
+
+A lot of cool stuff in spring is based around dynamically generated classes which conform to interfaces, allowing them to be substituted for the original code.
+If you think back to the Spring Dependency Injection presentation, the session scoped bean was implemented as a dynamic proxy.
+That was one example of this technique.
+The implementation of Aspect Oriented Programming is another.
+
+#### Custom Class Loader
+
+Spring uses it's own class loader to load all classes.
+This allows it to create a proxy which will invoke the appropriate code.
