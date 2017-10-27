@@ -1,7 +1,7 @@
 {
   "name": "How-it-Works",
   "description": "Presentation on the implementation of different Java technologies",
-  "homepage": "https://github.com/matthewfranglen/how-java-tools-work-presentation",
+  "homepage": "https://github.com/matthewfranglen/java-tools-aspect-oriented-programming-presentation",
   "scripts": {
     "start": "grunt serve"
   },
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matthewfranglen/how-java-tools-work-presentation.git"
+    "url": "https://github.com/matthewfranglen/java-tools-aspect-oriented-programming-presentation.git"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
