@@ -184,3 +184,21 @@ public class Test {
     }
 }
 ```
+
+### WARNING
+
+So Aspect Oriented Programming looks pretty cool.
+It is very powerful.
+
+The biggest problem with it is the fact it is action at a distance.
+The use of it can make it difficult to reason about the behaviour of code.
+You will most likely use it when you use a library that uses it.
+
+Writing it yourself should be done with great restraint.
+First try to think of a less surprising way which meets your needs and is maintainable.
+
+### Profiling
+
+Now that we have seen how Aspect Oriented Programming works and can be used, lets discuss profiling.
+How could profiling be implemented?
+(Profiling is actually done using JVMTI - Java Virtual Machine Tool Interface)
