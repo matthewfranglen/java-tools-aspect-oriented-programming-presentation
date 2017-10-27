@@ -133,3 +133,18 @@ It can advise method invocation.
 
 It does this by fully altering the code that is loaded.
 It can do this at compile time, using a custom compiler, or at run time using a custom class loader.
+
+#### Parsing into an Abstract Syntax Tree
+
+To understand how it can do this it's good to understand how compilers work.
+Aspect J is a full compiler and it happens to compile bytecode and an Aspect Oriented Program into bytecode.
+
+Once Aspect J has loaded the advice it can then work on applying the advice to the bytecode.
+To do this it must have a representation of the bytecode that it can work with.
+This is achieved by parsing the code.
+Parsing produces an Abstract Syntax Tree.
+
+[show "parse" of simple expression]
+
+It happens that expressions in bytecode are very shallow, and so the abstract syntax tree is relatively simple.
+This makes it easier to work with.
