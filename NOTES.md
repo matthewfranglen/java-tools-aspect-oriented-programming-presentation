@@ -40,7 +40,7 @@ Since Aspect Oriented Programming is only rarely used it's best to actually intr
  * Join Point is a point in your base application which is a suitable target.
  * Pointcut is a way to identify one or more Join Points in your application.
  * Advice is an action to take.
- * Weaving is the application of Advice to Pointcuts.
+ * Weaving is the application of Advice to Pointcuts. (I'm going to call this application / applying).
 
 Spring Aspect Oriented programming is implemented using dynamically generated proxies.
 This allows the invocation of methods to be advised.
@@ -148,3 +148,39 @@ Parsing produces an Abstract Syntax Tree.
 
 It happens that expressions in bytecode are very shallow, and so the abstract syntax tree is relatively simple.
 This makes it easier to work with.
+
+[show breakdown of class -> {fields, methods -> {expressions}} type tree]
+
+#### Alterations
+
+Once you have the Abstract Syntax Tree the next step is to apply the advice.
+The way to alter a tree is to use the visitor pattern.
+The way that pointcuts are defined allows the visitor to view only the parts of the tree that are interesting.
+
+[show how the pointcut can guide the visit]
+
+Once you have identified the relevant statement the alterations can be applied.
+The structure of bytecode includes a header which has specific offsets.
+To alter bytecode you must be able to recalculate those offsets.
+This means that the alteration is done using a bytecode library.
+Java Assist is an excellent example of such a library.
+
+```
+public class Hello {
+    public void say() {
+        System.out.println("Hello");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) throws Exception {
+        ClassPool cp = ClassPool.getDefault();
+        CtClass cc = cp.get("Hello");
+        CtMethod m = cc.getDeclaredMethod("say");
+        m.insertBefore("{ System.out.println(\"Hello.say():\"); }");
+        Class c = cc.toClass();
+        Hello h = (Hello)c.newInstance();
+        h.say();
+    }
+}
+```
