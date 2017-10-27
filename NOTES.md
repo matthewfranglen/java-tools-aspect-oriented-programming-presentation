@@ -110,7 +110,7 @@ This should provide enough context for Spring Aspect Oriented Programming for th
 It's important to realise that Spring Aspect Oriented Programming is quite limited, and a full Aspect Oriented Programming implementation allows for full and arbitrary alteration of code.
 We will discuss Aspect J which is such an implementation.
 
-#### How is this achieved?
+### How is this achieved?
 
 A lot of cool stuff in spring is based around dynamically generated classes which conform to interfaces, allowing them to be substituted for the original code.
 If you think back to the Spring Dependency Injection presentation, the session scoped bean was implemented as a dynamic proxy.
@@ -121,3 +121,15 @@ The implementation of Aspect Oriented Programming is another.
 
 Spring uses it's own class loader to load all classes.
 This allows it to create a proxy which will invoke the appropriate code.
+
+[go through example of this]
+
+### Aspect J and full Aspect Oriented Programming
+
+Aspect J is capable of altering basically anything.
+It can change the definitions of classes and interfaces.
+It can advise reads and writes of variables.
+It can advise method invocation.
+
+It does this by fully altering the code that is loaded.
+It can do this at compile time, using a custom compiler, or at run time using a custom class loader.
