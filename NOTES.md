@@ -41,25 +41,34 @@ Since Aspect Oriented Programming is only rarely used it's best to actually intr
 
 #### Terms
 
- * Join Point is a point in your base application which is a suitable target.
 [Show Join Point slide]
+ * Join Point is a point in your base application which is a suitable target.
 
+[Show Pointcut slide]
  * Pointcut is a way to identify one or more Join Points in your application.
+
+[Show Advice slide]
  * Advice is an action to take.
+
+[Show Weaving slide]
  * Weaving is the application of Advice to Pointcuts. (I'm going to call this application / applying).
+
+[Show Spring AOP slide]
+#### Spring Aspect Oriented Programming
 
 Spring Aspect Oriented programming is implemented using dynamically generated proxies.
 This allows the invocation of methods to be advised.
 In practice this is usually sufficient, when it is not there are more sophisticated Aspect Oriented Programming tools available.
 
+[Show Spring Pointcut slide]
 #### Pointcuts
 
 Pointcuts are created by annotating methods.
 The annotation controls the join points that are matched.
 This following pointcut would match the execution of the method named transfer.
 ```
-@Pointcut("execution(* transfer(..))")// the pointcut expression
-private void anyOldTransfer() {}// the pointcut signature
+@Pointcut("execution(* transfer(..))") // the pointcut expression
+private void anyOldTransfer() {}       // the pointcut signature
 ```
 
 You can combine pointcuts by referring to the name of the method that was annotated.

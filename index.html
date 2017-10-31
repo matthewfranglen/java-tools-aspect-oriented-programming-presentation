@@ -68,16 +68,14 @@
                 <section>
                     <h3>Join Points</h3>
                     <p>Addressable units of code</p>
-                    <pre><code>
-public class Main {         // Class Definition
+                    <pre><code>public class Main {         // Class Definition
     public static void main // Method Definition
     (String[] args) {       // Argument Definition
         System.out          // Field Access
         .println            // Method Invocation
         (args[0])           // Variable Reference
     }
-}
-                    </code></pre>
+}</code></pre>
                 </section>
 
                 <section>
@@ -98,6 +96,41 @@ public class Main {         // Class Definition
                     <p>The application of Advice to Join Points</p>
                 </section>
 
+                <section>
+                    <h2>Spring Aspect Oriented Programming</h2>
+                    <p>It's weak</p>
+                    <p>That's ok</p>
+                </section>
+
+                <section>
+                    <h3>Pointcut Definition</h3>
+                    <pre><code class="java">@Pointcut("execution(* transfer(..))") // the pointcut expression
+private void anyOldTransfer() {}       // the pointcut signature</code></pre>
+                </section>
+
+                <section>
+                    <h3>Combining Pointcuts</h3>
+                    <pre><code class="java">@Pointcut("execution(public * *(..))")
+private void anyPublicOperation() {}
+
+@Pointcut("within(com.xyz.someapp.trading..*)")
+private void inTrading() {}
+
+@Pointcut("anyPublicOperation() && inTrading()")
+private void tradingOperation() {}</code></pre>
+                </section>
+
+                <section>
+                    <h3>Referencing Pointcuts</h3>
+                    <pre><code class="java">package a.b.c;
+
+@Aspect
+class PointcutCollection {
+    @Pointcut("execution(* transfer(..))")
+    private void anyOldTransfer() {}
+}</code></pre>
+                    <p>You can then reference this as a.b.c.PointcutCollection.anyOldTransfer()</p>
+                </section>
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
