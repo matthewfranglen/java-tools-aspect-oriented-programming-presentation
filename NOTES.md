@@ -107,6 +107,7 @@ That means that the advice you give is limited to what you can replace the metho
  * You can alter the return value
  * You can inspect exceptions
 
+[Show Advice Definition slide]
 ##### Advice and Weaving
 
 Advice comes with the pointcut to advise, so the declaration of advice is enough to trigger weaving.
@@ -126,6 +127,8 @@ public class AfterReturningExample {
 ```
 
 This should provide enough context for Spring Aspect Oriented Programming for the discussion of the implementation to make sense.
+
+[Show Limited slide]
 It's important to realise that Spring Aspect Oriented Programming is quite limited, and a full Aspect Oriented Programming implementation allows for full and arbitrary alteration of code.
 We will discuss Aspect J which is such an implementation.
 

@@ -146,6 +146,26 @@ class PointcutCollection {
                         <li>Surrounding or Replacing</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Advice Definition</h2>
+                    <pre><code class="java">@Aspect
+public class AfterReturningExample {
+
+    @AfterReturning(
+        pointcut="a.b.c.Pointcuts.dataAccessOperation()",
+        returning="value")
+    public void doAccessCheck(Object value) {
+            // ...
+    }
+
+}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Limited</h2>
+                </section>
+
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
