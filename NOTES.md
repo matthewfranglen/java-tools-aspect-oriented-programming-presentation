@@ -37,9 +37,13 @@ Aspect Oriented Programming allows you to implement cross cutting concerns witho
 
 Since Aspect Oriented Programming is only rarely used it's best to actually introduce it properly rather than immediately jump to implementation.
 
+[Show terms slide]
+
 #### Terms
 
  * Join Point is a point in your base application which is a suitable target.
+[Show Join Point slide]
+
  * Pointcut is a way to identify one or more Join Points in your application.
  * Advice is an action to take.
  * Weaving is the application of Advice to Pointcuts. (I'm going to call this application / applying).
