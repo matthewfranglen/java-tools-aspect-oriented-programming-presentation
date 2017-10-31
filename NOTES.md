@@ -146,8 +146,10 @@ The implementation of Aspect Oriented Programming is another.
 Spring uses it's own class loader to load all classes.
 This allows it to create a proxy which will invoke the appropriate code.
 
+[Show example slide]
 [go through example of this]
 
+[Show Aspect J slide]
 ### Aspect J and full Aspect Oriented Programming
 
 Aspect J is capable of altering basically anything.
