@@ -60,7 +60,7 @@ Spring Aspect Oriented programming is implemented using dynamically generated pr
 This allows the invocation of methods to be advised.
 In practice this is usually sufficient, when it is not there are more sophisticated Aspect Oriented Programming tools available.
 
-[Show Spring Pointcut slide]
+[Show Defining Pointcut slide]
 #### Pointcuts
 
 Pointcuts are created by annotating methods.
@@ -71,6 +71,7 @@ This following pointcut would match the execution of the method named transfer.
 private void anyOldTransfer() {}       // the pointcut signature
 ```
 
+[Show Combining Pointcut slide]
 You can combine pointcuts by referring to the name of the method that was annotated.
 This allows more complex pointcuts to be broken down.
 ```
@@ -84,6 +85,7 @@ private void inTrading() {}
 private void tradingOperation() {}
 ```
 
+[Show Referencing Pointcut slide]
 Pointcuts are in classes so that you can reference them when you wish to apply advice.
 ```
 @Aspect
@@ -93,11 +95,13 @@ class PointcutCollection {
 }
 ```
 
+[Show Spring Advice slide]
 #### Advice
 
 In Spring Aspect Oriented Programming you can only advise methods.
 That means that the advice you give is limited to what you can replace the method call with.
 
+[Show Advice Types slide]
  * You can substitute the method call
  * You can run code before
  * You can alter the return value
