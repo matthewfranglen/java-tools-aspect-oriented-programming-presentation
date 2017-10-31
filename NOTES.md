@@ -132,8 +132,10 @@ This should provide enough context for Spring Aspect Oriented Programming for th
 It's important to realise that Spring Aspect Oriented Programming is quite limited, and a full Aspect Oriented Programming implementation allows for full and arbitrary alteration of code.
 We will discuss Aspect J which is such an implementation.
 
+[Show Implementation Details slide]
 ### How is this achieved?
 
+[Show Dynamic Proxy slide]
 A lot of cool stuff in spring is based around dynamically generated classes which conform to interfaces, allowing them to be substituted for the original code.
 If you think back to the Spring Dependency Injection presentation, the session scoped bean was implemented as a dynamic proxy.
 That was one example of this technique.

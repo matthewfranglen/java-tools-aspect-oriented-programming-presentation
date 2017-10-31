@@ -166,6 +166,38 @@ public class AfterReturningExample {
                     <h2>Limited</h2>
                 </section>
 
+                <section>
+                    <h2>Implementation Details</h2>
+                </section>
+
+                <section>
+                    <h3>Dynamic Proxies</h3>
+                    <img src="media/dynamic-proxy.png" />
+                </section>
+
+                <section>
+                    <pre><code class="java">@Before(pointcut="execution(public * speak(..))")
+public void sayHello() {
+    System.out.println("Hello, World!");
+}
+
+@Controller
+public class Cat {
+    public void speak() {
+        System.out.println("meow");
+    }
+}</code></pre>
+                    <h3>Becomes</h3>
+                    <pre><code class="java">public class ProxyCat extends Cat {
+    private Cat proxy;
+    public void speak() {
+        System.out.println("Hello, World!");
+        proxy.speak();
+    }
+}</code></pre>
+                </section>
+
+
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
