@@ -88,8 +88,8 @@ Pointcuts are in classes so that you can reference them when you wish to apply a
 ```
 @Aspect
 class PointcutCollection {
-    @Pointcut("execution(* transfer(..))")// the pointcut expression
-    private void anyOldTransfer() {}// the pointcut signature
+    @Pointcut("execution(* transfer(..))")
+    private void anyOldTransfer() {}
 }
 ```
 
