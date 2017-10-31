@@ -152,6 +152,7 @@ This allows it to create a proxy which will invoke the appropriate code.
 [Show Aspect J slide]
 ### Aspect J and full Aspect Oriented Programming
 
+[Show real ultimate power slide]
 Aspect J is capable of altering basically anything.
 It can change the definitions of classes and interfaces.
 It can advise reads and writes of variables.
