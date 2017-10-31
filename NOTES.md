@@ -31,6 +31,8 @@ For these to be effective they must be implemented universally and consistently.
 Writing repetitive code is prone to error.
 Aspect Oriented Programming allows you to implement cross cutting concerns without repetition.
 
+[Show unfamiliar slide]
+
 ### What is Aspect Oriented Programming?
 
 Since Aspect Oriented Programming is only rarely used it's best to actually introduce it properly rather than immediately jump to implementation.

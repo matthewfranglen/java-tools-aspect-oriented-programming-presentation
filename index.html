@@ -45,6 +45,41 @@
                     <h2>What Problem Does This Solve?</h2>
                 </section>
 
+                <section>
+                    <p>Aspect Oriented Programming</p>
+                    <img src="media/cross-cutting-concerns.jpg" />
+                    <p>is about cross cutting concerns</p>
+                </section>
+
+                <section>
+                    <h2>Never Used It?</h2>
+                </section>
+
+                <section>
+                    <h3>Definitions</h3>
+                    <ul>
+                        <li>Join Point</li>
+                        <li>Pointcut</li>
+                        <li>Advice</li>
+                        <li>Weaving</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Join Points</h3>
+                    <p>Addressable units of code</p>
+                    <pre><code>
+public class Main {         // Class Definition
+    public static void main // Method Definition
+    (String[] args) {       // Argument Definition
+        System.out          // Field Access
+        .println            // Method Invocation
+        (args[0])           // Variable Reference
+    }
+}
+                    </code></pre>
+                </section>
+
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
