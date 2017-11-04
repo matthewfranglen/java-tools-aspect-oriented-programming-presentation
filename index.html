@@ -28,6 +28,9 @@
             .text-border {
                 text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black !important;
             }
+            .text-center {
+                text-align: center !important;
+            }
         </style>
     </head>
     <body>
@@ -202,6 +205,19 @@ public class Cat {
                 </section>
 
                 <section data-background="media/so-powerful.jpg" data-background-size="cover">
+                </section>
+
+                <section>
+                    <h3>Expression</h3>
+                    <pre class="text-center"><code class="java">1 + (2 * 3)</code></pre>
+                    <h3>Tokens</h3>
+                    <pre class="text-center"><code class="java">["1", "+", "(", "2", "*", "3", ")"]</code></pre>
+                    <h3>Abstract Syntax Tree</h3>
+                    <pre class="text-center"><code>     +    
+    / \   
+   1   *  
+      / \ 
+     2   3</code></pre>
                 </section>
 
         </div>
