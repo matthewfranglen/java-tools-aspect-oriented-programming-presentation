@@ -221,6 +221,7 @@ public class Test {
 }
 ```
 
+[show responsibility slide]
 ### WARNING
 
 So Aspect Oriented Programming looks pretty cool.
@@ -232,9 +233,3 @@ You will most likely use it when you use a library that uses it.
 
 Writing it yourself should be done with great restraint.
 First try to think of a less surprising way which meets your needs and is maintainable.
-
-### Profiling
-
-Now that we have seen how Aspect Oriented Programming works and can be used, lets discuss profiling.
-How could profiling be implemented?
-(Profiling is actually done using JVMTI - Java Virtual Machine Tool Interface)
