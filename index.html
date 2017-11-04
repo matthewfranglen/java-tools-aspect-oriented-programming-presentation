@@ -240,6 +240,43 @@ public class Cat {
                         </li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Making Changes</h2>
+                </section>
+
+                <section>
+                    <h2>Visitor Pattern</h2>
+                </section>
+
+                <section>
+                    <h2>Changing Bytecode</h2>
+                    <p>It's not like changing Java Source Code</p>
+                </section>
+
+                <section>
+                    <h2>Java Assist</h2>
+                    <pre><code class="java">public class Hello {
+  public void say() {
+    System.out.println("Hello");
+  }
+}
+</code></pre>
+
+                    <pre><code class="java">public class Test {
+  public static void main(String[] args) throws Exception {
+    ClassPool cp = ClassPool.getDefault();
+    CtClass cc = cp.get("Hello");
+    CtMethod m = cc.getDeclaredMethod("say");
+    m.insertBefore("{ System.out.println(\"Hello.say():\"); }");
+    Class c = cc.toClass();
+    Hello h = (Hello)c.newInstance();
+    h.say();
+  }
+}
+</code></pre>
+                </section>
+
         </div>
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>

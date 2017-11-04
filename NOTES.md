@@ -178,18 +178,27 @@ Go through this.
 It happens that expressions in bytecode are very shallow, and so the abstract syntax tree is relatively simple.
 This makes it easier to work with.
 
+[show alterations slide]
 #### Alterations
 
 Once you have the Abstract Syntax Tree the next step is to apply the advice.
+
+[show visitor pattern slide]
 The way to alter a tree is to use the visitor pattern.
-The way that pointcuts are defined allows the visitor to view only the parts of the tree that are interesting.
+The visitor pattern is a recursive traversal of the tree.
+It is able to visit any part of the tree, and it can accumulate data while it does so.
 
-[show how the pointcut can guide the visit]
+Pointcuts are like an address, and the visitor can determine if it is at that address.
+If it is, then it can apply the associated advice.
+Otherwise it can just copy the original code.
 
+[show changing bytecode slide]
 Once you have identified the relevant statement the alterations can be applied.
 The structure of bytecode includes a header which has specific offsets.
 To alter bytecode you must be able to recalculate those offsets.
 This means that the alteration is done using a bytecode library.
+
+[show java assist slide]
 Java Assist is an excellent example of such a library.
 
 ```
