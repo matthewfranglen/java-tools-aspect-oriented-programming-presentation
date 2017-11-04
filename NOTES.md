@@ -172,11 +172,11 @@ This is achieved by parsing the code.
 Parsing produces an Abstract Syntax Tree.
 
 [show "parse" of simple expression]
-
-It happens that expressions in bytecode are very shallow, and so the abstract syntax tree is relatively simple.
-This makes it easier to work with.
+Go through this.
 
 [show breakdown of class -> {fields, methods -> {expressions}} type tree]
+It happens that expressions in bytecode are very shallow, and so the abstract syntax tree is relatively simple.
+This makes it easier to work with.
 
 #### Alterations
 
