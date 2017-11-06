@@ -31,6 +31,12 @@ For these to be effective they must be implemented universally and consistently.
 Writing repetitive code is prone to error.
 Aspect Oriented Programming allows you to implement cross cutting concerns without repetition.
 
+[show porting slide]
+
+Full aspect oriented programming can also perform arbitrary alterations.
+This permits drastic changes to be consistently applied.
+I became experienced with Aspect Oriented Programming by writing code that would change feature phone applications to work on other devices.
+
 [Show unfamiliar slide]
 
 ### What is Aspect Oriented Programming?
