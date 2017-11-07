@@ -59,6 +59,9 @@ Since Aspect Oriented Programming is only rarely used it's best to actually intr
 [Show Weaving slide]
  * Weaving is the application of Advice to Pointcuts. (I'm going to call this application / applying).
 
+[Show Inter-Type Declaration slide]
+ * Inter-Type Declarations are how you can change the static structure of the code. This is the classes and the relationships between them.
+
 [Show Spring AOP slide]
 #### Spring Aspect Oriented Programming
 
