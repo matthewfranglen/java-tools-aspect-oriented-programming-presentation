@@ -234,6 +234,10 @@ public class Test {
 }
 ```
 
+Java Assist is actually more capable than Aspect J because it is able to perform arbitrary alterations.
+I'm not an expert in it's use.
+From what I can see doing very low level stuff is fragile.
+
 [show responsibility slide]
 ### WARNING
 
