@@ -167,6 +167,10 @@ It can change the definitions of classes and interfaces.
 It can advise reads and writes of variables.
 It can advise method invocation.
 
+It can't alter the reads and writes of static final primitive fields (e.g. string constants).
+The Java compiler requires that these be inlined.
+It also doesn't have a pointcut that can identify non-field non-method operations (for loops, addition etc).
+
 It does this by fully altering the code that is loaded.
 It can do this at compile time, using a custom compiler, or at run time using a custom class loader.
 
